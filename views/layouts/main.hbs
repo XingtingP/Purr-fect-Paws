@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{appName}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <!-- JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/scripts/tabs.js"></script>
+</head>
+
+<body>
+    <div class="bar"></div>
+    
+    <!--header: my logo -->
+    <header id="header">
+        <img src="/images/logo.png" alt="Purr-fect Paws">
+    </header>
+
+    <!-- Linking to other page -->
+    <nav id="nav">
+        <button class="nav"><a href="/">Home</a></button>
+        <button class="nav"><a href="/short-coat">Short Coat Breeds</a></button>
+        <button class="nav"><a href="/long-coat">Long Coat Breeds</a></button>
+        <button class="nav"><a href="/small-to-medium">Small to Medium Breeds</a></button>
+        <button class="nav"><a href="/medium-to-large">Medium to Large Breeds</a></button>
+    </nav>
+
+
+    <br><br>
+    
+    <div class="bar"></div> <br>
+
+    {{{body}}}
+
+    <br><br><div class="bar"></div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Contact us at: SomeExampleEmail@email.com | {{ currentDate }}</p>
+    </footer>
+
+</body>
+</html>

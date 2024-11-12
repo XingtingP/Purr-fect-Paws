@@ -1,0 +1,23 @@
+<div class="cats-gallery">
+<form action="/search" method="post">
+    <!-- Search -->
+    <div id="search" class="searchBreeds">
+        <label for="searchInput">Find Your Purr-fect Match:</label>
+        <input type="text" id="searchInput" name="searchTerm" placeholder="Search by breed name">
+        <button id="searchButton" type="submit">Go</button>
+    </div>
+</form>
+    <br><br><br><br>
+    
+    <div class="cards-container">
+        {{#each cats}}
+        <div class="cat-card">
+            <!-- Wrap the image and name inside an anchor tag -->
+            <a href="/detail/{{this.id}}">
+                <img src="{{this.image}}" alt="{{this.name}}" width="200">
+                <p class="cat-name">{{this.name}}</p>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+</div>

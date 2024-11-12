@@ -1,0 +1,108 @@
+<div class="details-page">
+<form action="/search" method="post">
+    <!-- Search -->
+    <div id="search" class="searchBreeds">
+        <label for="searchInput">Find Your Purr-fect Match:</label>
+        <input type="text" id="searchInput" name="searchTerm" placeholder="Search by breed name">
+        <button id="searchButton" type="submit">Go</button>
+    </div>
+    <br><br>
+    
+   <!-- Cat Image -->
+    <div class="cat-image">
+    <img src="{{cat.image}}" alt="Picture of {{cat.name}}" />
+    </div>
+
+    
+  <div class="tabs">
+    <button class="tab-button active" data-tab="overview">Overview</button>
+    <button class="tab-button" data-tab="features">Physical Characteristics</button>
+    <button class="tab-button" data-tab="history">History and Origin</button>
+    <button class="tab-button" data-tab="care">Health and Care</button>
+  </div>
+
+  <!-- Overview Tab Content -->
+  <div class="tab-content" id="overview">
+    <p>{{cat.overview}}</p>
+  </div>
+
+  <!-- Features/Physical Characteristics Tab Content -->
+  <div class="tab-content" id="features" style="display: none;">
+    <ul>
+        <li><strong>Face:</strong> {{cat.physicalCharacteristics.face}}</li>
+        <li><strong>Body:</strong> {{cat.physicalCharacteristics.body}}</li>
+        <li><strong>Coat:</strong> {{cat.physicalCharacteristics.coat}}</li>
+        <li><strong>Color:</strong> {{cat.physicalCharacteristics.color}}</li>
+        <li><strong>Eyes:</strong> {{cat.physicalCharacteristics.eyes}}</li>
+    </ul>
+  </div>
+
+  <!-- History and Origin Tab Content -->
+  <div class="tab-content" id="history" style="display: none;">
+    <p>{{cat.historyAndOrigin}}</p>
+  </div>
+
+  <!-- Health and Care Tab Content -->
+  <div class="tab-content" id="care" style="display: none;">
+    <ul>
+        <li><strong>Health:</strong> {{cat.healthAndCare.health}}</li>
+        <li><strong>Diet:</strong> {{cat.healthAndCare.diet}}</li>
+        <li><strong>Exercise:</strong> {{cat.healthAndCare.exercise}}</li>
+        <li><strong>Grooming:</strong> {{cat.healthAndCare.grooming}}</li>
+        <li><strong>Lifespan:</strong> {{cat.healthAndCare.lifespan}}</li>
+    </ul>
+  </div>
+  </form><br><br><br>
+
+    
+<form action="/submitReview/{{cat.id}}" method="post">
+    <div class="reviews">
+        <h1>Reviews</h1>
+
+        <!-- Feedback Options -->
+        <div id="category">
+            <div id="category1" class="category">
+                <h2>Energy Level</h2>
+                <label><input type="checkbox" name="energy[]" class="energy" value="Low-energy"> Low-energy</label>
+                <label><input type="checkbox" name="energy[]" class="energy" value="Medium-energy"> Medium-energy</label>
+                <label><input type="checkbox" name="energy[]" class="energy" value="High-energy"> High-energy</label>
+                <label><input type="checkbox" name="energy[]" class="energy" value="Supercharged turbo-kitty"> Supercharged turbo-kitty</label><br>
+                <p id="energyPercentage"></p>
+            </div><br>
+
+            <div id="category2" class="category">
+                <h2>Communication</h2>
+                <label><input type="checkbox" name="communication[]" class="communication" value="Quiet cat"> Quiet cat</label>
+                <label><input type="checkbox" name="communication[]" class="communication" value="Chatty cat"> Chatty cat</label>
+                <label><input type="checkbox" name="communication[]" class="communication" value="Has a purr-fectly charming voice"> Has a purr-fectly charming voice</label>
+                <label><input type="checkbox" name="communication[]" class="communication" value="Master of funny vocalizations"> Master of funny vocalizations</label><br>
+                <p id="communicationPercentage"></p>
+            </div><br>
+
+            <div id="category3" class="category">
+                <h2>Compatibility</h2>
+                <label><input type="checkbox" name="compatibility[]" class="compatibility" value="Good with kids"> Good with kids</label>
+                <label><input type="checkbox" name="compatibility[]" class="compatibility" value="Good with dogs"> Good with dogs</label>
+                <label><input type="checkbox" name="compatibility[]" class="compatibility" value="Shy with new faces"> Shy with new faces</label>
+                <label><input type="checkbox" name="compatibility[]" class="compatibility" value="Social butterfly, loves everyone"> Social butterfly, loves everyone</label><br>
+                <p id="compatibilityPercentage"></p>
+            </div><br>
+
+            <div id="category4" class="category">
+                <h2>Behavior with Furniture</h2>
+                <label><input type="checkbox" name="furniture[]" class="furniture" value="Respects the sacredness of sofas"> Respects the sacredness of sofas</label>
+                <label><input type="checkbox" name="furniture[]" class="furniture" value="Loves to sharpen claws on furniture"> Loves to sharpen claws on furniture</label>
+                <label><input type="checkbox" name="furniture[]" class="furniture" value="Uses furniture as a springboard for jumps"> Uses furniture as a springboard for jumps</label>
+                <label><input type="checkbox" name="furniture[]" class="furniture" value="Naps in the coziest furniture spots"> Naps in the coziest furniture spots</label><br>
+                <p id="furniturePercentage"></p>
+            </div><br>
+
+            <button id="submitButton" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+
+
+<br><br><br>
+</div>
+

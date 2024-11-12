@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,600;1,600&family=Montserrat:wght@200&display=swap');
+
+/* Applies to all page content */
+body {
+  background-color: #E6E6FA;
+  color: #7547a3;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+/* for my layout and sections */
+div.bar {
+  background-color: #7547a3;
+  height: 25px;
+}
+
+/* Set the size of the image inside the header */
+header img {
+  width: 400px;
+  height: auto;
+}
+
+/* styles for my menu buttons */
+button.nav {
+  background-color: #9370DB;
+  border: none;
+  padding: 0px 8px;
+  margin: 2px 10px; 
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  width: 200px;
+  height: 40px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+button.nav:hover {
+  background-color: #BA55D3;
+}
+
+
+/* unvisited link */
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/* Styles for the content section */
+#content {
+  padding: 0 200px;
+}
+
+#content h1 {
+  font-size: 30px;
+}
+
+/* Styles for the search section */
+#search h3 {
+  font-size: 24px; 
+}
+#searchInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+#searchButton {
+  background-color: #9370DB;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#searchButton:hover {
+  background-color: #BA55D3;
+}
+
+/* Styles for the footer section */
+#footer {
+  padding: 1.2em;
+  background-color: #9370DB;
+  color: #FFF;
+  font-size: 16px;
+}
+
+/* Styles for the card container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.cat-card {
+    flex: 0 1 calc(33.33% - 10px);
+    margin: 5px;
+}
+
+.cat-name {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #7547a3;
+}
+
+/* Styles for the search section in the cats-gallery */
+.details-page #search,
+.cats-gallery #search {
+  float: right;
+  margin-right: 30px;
+}
+
+.details-page #searchInput,
+.cats-gallery #searchInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  height: 8px;
+}
+
+.details-page #searchButton,
+.cats-gallery #searchButton {
+  background-color: #9370DB;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.details-page #searchButton:hover,
+.cats-gallery #searchButton:hover {
+  background-color: #BA55D3;
+}
+
+/* Tabs styles*/
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tab-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  color: white;
+  background-color: #9370DB;
+  border: none;
+  outline: none;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #BA55D3;
+}
+
+.tab-button.active {
+  background-color: #BA55D3;
+}
+
+.tab-content {
+  display: none;
+  background-color: #BA55D3;
+  color:white;
+  padding: 20px;
+  border: 0px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* review section styles*/
+.reviews {
+    text-align: left;
+    margin-left: 100px;
+}
+#submitButton {
+    background-color: #9370DB;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+#submitButton:hover {
+    background-color: #BA55D3;
+  }
+
+/* detail image styles*/
+.cat-image img {
+    width: 280px;
+    height: auto;
+    display: block;
+    margin: 20px auto 0 auto;
+}
